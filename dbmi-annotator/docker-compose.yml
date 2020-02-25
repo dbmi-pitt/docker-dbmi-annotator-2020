@@ -59,7 +59,7 @@ services:
         depends_on: 
             - "postgres"
             - "annotator-store"
-        image: yin2/dbmi-annotator:latest
+        image: maxsibilla/dbmi-annotator:latest
         environment:
             - PGHOST=postgres
             - PGDATABASE=dbmiannotator
