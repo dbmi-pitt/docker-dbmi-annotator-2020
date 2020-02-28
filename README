@@ -42,7 +42,12 @@ Deploy DBMI-Annotator on production mode
 
     # RDF redirects
     RewriteRule /DDI-pdfs/(.*) http://localhost:8085/DDI-pdfs/$1 [P]
-
+    
+    ...................................................................
+    You may need to run:
+        $ a2enmod rewrite - This will enable rewrite engine
+        $ a2enmod proxy_http - This will enable proxy pass
+        
 (2) Create local volumes for postgres and elasticsearch data mount point
 
     $ bash scripts/create-docker-volumns.sh
@@ -53,7 +58,7 @@ Deploy DBMI-Annotator on production mode
     $ cd dbmi-annotator
     $ docker-compose up -d
     
-    Access DBMI Annotator via http://localhost:8085/dbmiannotator
+    Access DBMI Annotator via http://localhost/dbmiannotator
 
 (4) Optional: add extra articles for annotating. Currently version is supporting Pubmed centre article (PMC), Dailymed product labeling (SPL) and PDFs.
     
