@@ -52,6 +52,8 @@ Deploy DBMI-Annotator on production mode
     $ bash scripts/clean-docker-ps.sh (note: this can only be ran when docker is running, you do not need to run this when first setting up docker-compose)
     $ cd dbmi-annotator
     $ docker-compose up -d
+    
+    Access DBMI Annotator via http://localhost:8085/dbmiannotator
 
 (4) Optional: add extra articles for annotating. Currently version is supporting Pubmed centre article (PMC), Dailymed product labeling (SPL) and PDFs.
     
