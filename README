@@ -49,7 +49,7 @@ Deploy DBMI-Annotator on production mode
 
 (3) Run dbmi-annotator with all dependencies in docker container, takes 20 secs for setup all services
 
-    $ bash scripts/clean-docker-ps.sh
+    $ bash scripts/clean-docker-ps.sh (note: this can only be ran when docker is running, you do not need to run this when first setting up docker-compose)
     $ cd dbmi-annotator
     $ docker-compose up -d
 
